@@ -1,4 +1,5 @@
 from fastapi import APIRouter 
+import boto3
 
 router = APIRouter(
     prefix="/test",
@@ -10,3 +11,7 @@ router = APIRouter(
 @router.get("/hello")
 async def test():
     return {"message": "hello world"}
+
+@router.get("/film")
+async def test_stream():
+    pass
